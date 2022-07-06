@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function handleSelect(elm)
+      {
+         window.location = elm.value+".html";
+      }
+
+      function handleRadio(e){
+          window.location=e.value+".html";
+      }
+    </script>
+    <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/media_query.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+</head>
+<body>
+    <section class="movies">
+
+        <!--
+          - filter bar
+        -->
+        <div class="filter-bar">
+
+          <div class="filter-dropdowns">
+
+            <select name="genre" class="genre" onchange="javascript:handleSelect(this)">
+              <option value="all genres">All genres</option>
+              <option value="action">Action</option>
+              <option value="horror">Horror</option>
+              <option value="adventure">Adventure</option>
+              <option value="sci-fi">Sci-Fi</option>
+              
+              <option value="biography">Biography</option>
+            </select>
+
+            <select name="year" class="year">
+              <option value="all years">All the years</option>
+              <option value="2022">2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2010-2019">2010-2019</option>
+              <option value="2000-2009">2000-2009</option>
+              <option value="1980-1999">1980-1999</option>
+            </select>
+
+          </div>
+
+          <div class="filter-radios">
+
+            <input type="radio" name="grade" id="featured" checked value="featured" onclick="handleRadio(this);">
+            <label for="featured">Featured</label>
+
+            <input type="radio" name="grade" id="popular" value="popular" onclick="handleRadio(this);">
+            <label for="popular">Popular</label>
+
+            <input type="radio" name="grade" id="newest" value="newest" onclick="handleRadio(this);">
+            <label for="newest">Newest</label>
+
+            <div class="checked-radio-bg"></div>
+
+          </div>
+
+        </div>
+
+
+        <!--
+          - movies grid
+        -->
+
+        <div class="movies-grid">
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/interstellar.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.6</span>
+                </div>
+
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Interstellar</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2014</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/tenet.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.3</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Tenet</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Action</span>
+                <span class="year">2020</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/inception.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.8</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Inception</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Action</span>
+                <span class="year">2010</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/martian.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Martian</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Adventure</span>
+                <span class="year">2015</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/dune.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Dune</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+
+          </div>
+
+          
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/matrix.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>5.7</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Matrix Resurrections</h3>
+
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/arrival.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.9</span>
+                </div>
+                 
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Arrival</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Drama</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/men-in-black.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.7</span>
+                </div>
+                 
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Men In Black</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Comedy</span>
+                <span class="year">1997</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/passengers.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.0</span>
+                </div>
+                 
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Passengers</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/source-code.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.5</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Source Code</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2011</span>
+              </div>
+            </div>
+        
+          </div>
+        
+         
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/ai.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.2</span>
+                </div>
+                 
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">A.I Artificial Intelligence</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Drama</span>
+                <span class="year">2001</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/Transcendence.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.2</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Transcendence</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2014</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/oxygen.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.4</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Oxygen</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/life.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.6</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Life</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Horror</span>
+                <span class="year">2017</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="./assets/images/scifi-movies/alien-covenent.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.4</span>
+                </div>
+                
+                <a href="moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Alien: Covenant</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi/Horror</span>
+                <span class="year">2017</span>
+              </div>
+            </div>
+        
+          </div>
+        
+        </div>
+
+          
+
+        
+
+      </section>
+    <!--
+    - custom js link
+  -->
+  <script src="./assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

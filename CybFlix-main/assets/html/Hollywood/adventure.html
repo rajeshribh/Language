@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function handleSelect(elm)
+      {
+         window.location = elm.value+".html";
+      }
+
+      function handleRadio(e){
+          window.location=e.value+".html";
+      }
+    </script>
+    <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/CybFlix-main/assets/css/main.css">
+  <link rel="stylesheet" href="/CybFlix-main/assets/css/media_query.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+</head>
+<body>
+    <section class="movies">
+
+        <!--
+          - filter bar
+        -->
+        <div class="filter-bar">
+
+          <div class="filter-dropdowns">
+
+            <select name="genre" class="genre" onchange="javascript:handleSelect(this)">
+              <option value="all genres">All genres</option>
+              <option value="action">Action</option>
+              <option value="horror">Horror</option>
+              <option value="adventure">Adventure</option>
+              <option value="sci-fi">Sci-Fi</option>
+              
+              <option value="biography">Biography</option>
+            </select>
+
+            <select name="year" class="year">
+              <option value="all years">All the years</option>
+              <option value="2022">2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2010-2019">2010-2019</option>
+              <option value="2000-2009">2000-2009</option>
+              <option value="1980-1999">1980-1999</option>
+            </select>
+
+          </div>
+
+          <div class="filter-radios">
+
+            <input type="radio" name="grade" id="featured" checked value="featured" onclick="handleRadio(this);">
+            <label for="featured">Featured</label>
+
+            <input type="radio" name="grade" id="popular" value="popular" onclick="handleRadio(this);">
+            <label for="popular">Popular</label>
+
+            <input type="radio" name="grade" id="newest" value="newest" onclick="handleRadio(this);">
+            <label for="newest">Newest</label>
+
+            <div class="checked-radio-bg"></div>
+
+          </div>
+
+        </div>
+
+
+        <!--
+          - movies grid
+        -->
+
+        <div class="movies-grid">
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/scifi-movies/interstellar.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.6</span>
+                </div>
+                 
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Interstellar</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure/Sci-Fi</span>
+                <span class="year">2014</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/the-revenant.webp" alt="" class="card-img">
+             
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Revenant</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/life-of-pie.jpg" alt="" class="card-img">
+             
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.9</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Life Of Pie</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2012</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/scifi-movies/martian.jpg" alt="" class="card-img">
+          
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Martian</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure/Sci-Fi</span>
+                <span class="year">2015</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/scifi-movies/dune.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Dune</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure/Sci-Fi</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+
+          </div>
+
+          
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/" alt="" class="card-img">
+              ./assets/images/adventure-movies/lord-of-the-rings.jpg
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>9.0</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Lord of the Rings: The Return of the King</h3>
+
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2003</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/gladiator.png" alt="" class="card-img">
+             
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.5</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Gladiator</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2000</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/apocalypto.jpg" alt="" class="card-img">
+           
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.8</span>
+                </div>
+                 
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Apocalypto</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2006</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/cast-away.jpg" alt="" class="card-img">
+              ./assets/images/adventure-movies/cast-away.jpg
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.8</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Cast Away</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure/Drama</span>
+                <span class="year">2000</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/the-three-musketeers.jpg" alt="" class="card-img">
+           
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>5.7</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title"></h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure/Action</span>
+                <span class="year">2011</span>
+              </div>
+            </div>
+        
+          </div>
+        
+         
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Deadpool</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure/Action</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/the-call-of-the-wild.jpg" alt="" class="card-img">
+              
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.9</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">The Call Of The Wild</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure/Drama</span>
+                <span class="year">2020</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/all-is-lost.jpg" alt="" class="card-img">
+              
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.9</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">All is Lost</h3>
+        
+              <div class="card-info">
+                <span class="genre">Sci-Fi</span>
+                <span class="year">2021</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/the-finest-hours.webp" alt="" class="card-img">
+           
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.7</span>
+                </div>
+                 
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">The Finest Hours</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/adventure-movies/the-lost-city.webp" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.1</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">The Lost City</h3>
+        
+              <div class="card-info">
+                <span class="genre">Adventure</span>
+                <span class="year">2022</span>
+              </div>
+            </div>
+        
+          </div>
+        
+        </div>
+
+          
+
+        
+
+      </section>
+    <!--
+    - custom js link
+  -->
+  <script src="/CybFlix-main/assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

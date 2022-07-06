@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoMoviePlay</title>
+    <style>
+        .container #movie1 {
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    
+}
+.container{
+    margin-left: 250px;
+}
+    </style>
+    <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/media_query.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+                
+                $.ajax({
+                url:'http://localhost:3000/movies',
+                method:'GET',
+                success: (data)=>{
+                    console.log(data);
+                        $("#movie1").attr({
+                        src : "./assets/movie-video/Video.mp4"
+                });                   
+                    
+                },
+                error:()=>{alert("Some netwrok issue")},
+                });
+
+                
+                $.ajax({
+                url:'http://localhost:3000/likes',
+                method:'GET',
+                success: (data)=>{
+                    let c=data.count;
+                    $("button").click(function () {
+    $.post("http://localhost:3000/likes",
+    {
+        count: 5
+      }
+    ,
+      
+      function (data, status) {
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+  });    
+                    
+                },
+                error:()=>{alert("Some netwrok issue")},
+                });
+
+                
+            
+        });
+
+    </script>
+</head>
+<body>
+    
+    <div class="container">
+         
+            <video id="movie1" controls src="" >Movie</video>
+
+        </div>     
+         
+
+        
+
+        <button>Play Movie</button>
+
+      </section>
+
+   
+</body>
+</html>

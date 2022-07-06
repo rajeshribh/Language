@@ -1,0 +1,16 @@
+$("button").click(function(){
+});
+
+
+$("button").click(function () {
+    $.post("http://localhost:3000/emp",
+    {
+        id: 5,
+        name: "asjhb"
+      }
+    ,
+      
+      function (data, status) {
+        alert("Data: " + data + "\nStatus: " + status);
+      });
+  });

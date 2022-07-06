@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function handleSelect(elm)
+      {
+         window.location = elm.value+".html";
+      }
+      function handleRadio(e){
+          window.location=e.value+".html";
+      }
+    </script>
+    <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/CybFlix-main/assets/css/main.css">
+  <link rel="stylesheet" href="/CybFlix-main/assets/css/media_query.css">
+
+  <!--
+    - google font link
+  -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+</head>
+<body>
+    <section class="movies">
+
+        <!--
+          - filter bar
+        -->
+        <div class="filter-bar">
+
+          <div class="filter-dropdowns">
+
+            <select name="genre" class="genre" onchange="javascript:handleSelect(this)">
+              <option value="all genres">All genres</option>
+              <option value="action">Action</option>
+              <option value="horror">Horror</option>
+              <option value="adventure">Adventure</option>
+              <option value="sci-fi">Sci-Fi</option>
+              
+              <option value="biography">Biography</option>
+            </select>
+
+            <select name="year" class="year">
+              <option value="all years">All the years</option>
+              <option value="2022">2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2010-2019">2010-2019</option>
+              <option value="2000-2009">2000-2009</option>
+              <option value="1980-1999">1980-1999</option>
+            </select>
+
+          </div>
+
+          <div class="filter-radios">
+
+            <input type="radio" name="grade" id="featured" checked value="featured" onclick="handleRadio(this);">
+            <label for="featured">Featured</label>
+
+            <input type="radio" name="grade" id="popular" value="popular" onclick="handleRadio(this);">
+            <label for="popular">Popular</label>
+
+            <input type="radio" name="grade" id="newest" value="newest" onclick="handleRadio(this);">
+            <label for="newest">Newest</label>
+
+            <div class="checked-radio-bg"></div>
+
+          </div>
+
+        </div>
+
+
+        <!--
+          - movies grid
+        -->
+
+        <div class="movies-grid">
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/m-s-dhoni.jpg" alt="" class="card-img">
+    
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.9</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">M.S Dhoni</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/the-social-network.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.8</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Social Network</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2010</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/lion.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+                 
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Lion</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/the-founder.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.2</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">The Founder</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography/History</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/first-man.jpg
+              " alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.3</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">First Man</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography/History</span>
+                <span class="year">2018</span>
+              </div>
+            </div>
+
+          </div>
+
+          
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/steve-jobs.jpg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.2</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Steve Jobs</h3>
+
+              <div class="card-info">
+                <span class="genre">Biography</span>
+                <span class="year">2015</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/a-beautiful-mind.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.2</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">A Beautiful Mind</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2001</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/the-big-short.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.7</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">The Theory Of Everything</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2014</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/sully.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.2</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Sully</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/concussion.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.1</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Concussion</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Sports</span>
+                <span class="year">2015</span>
+              </div>
+            </div>
+        
+          </div>
+        
+         
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/127-hours.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.6</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">127 Hours</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography</span>
+                <span class="year">2010</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/12-years-a-slave.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.1</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">12 Years A Slave</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography</span>
+                <span class="year">2014</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/ford-vs-ferrari.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.4</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Ford Vs Ferrari</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Sport</span>
+                <span class="year">2019</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/snowden.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.3</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">Snowden</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Thriller</span>
+                <span class="year">2016</span>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="movie-card">
+        
+            <div class="card-head">
+              <img src="/CybFlix-main/assets/images/Hollywood/biography-movies/the-big-short.jpg" alt="" class="card-img">
+        
+              <div class="card-overlay">
+        
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+        
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.8</span>
+                </div>
+                
+                <a href="/CybFlix-main/moviePlay.html">
+                <div class="play">
+                  <ion-icon name="play-circle-outline"></ion-icon>
+                </div>
+                </a>
+        
+              </div>
+            </div>
+        
+            <div class="card-body">
+              <h3 class="card-title">The Big Short</h3>
+        
+              <div class="card-info">
+                <span class="genre">Biography/Drama</span>
+                <span class="year">2015</span>
+              </div>
+            </div>
+        
+          </div>
+        
+        </div>
+
+          
+
+        
+
+      </section>
+    <!--
+    - custom js link
+  -->
+  <script src="/CybFlix-main/assets/js/main.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
